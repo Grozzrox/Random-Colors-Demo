@@ -1,5 +1,6 @@
 body {
-    display: flex;
+    display: flex;  
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;  
@@ -9,8 +10,34 @@ body {
 
 h1 {
     font-size: 15rem;
+    transition: all 3s;
+    margin-bottom: 0;
 }
 
 .letter {
     transition: color 1000ms;
+}
+
+.small {
+    transform: scale(0.5);
+}
+
+button {
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn {
+    border: 2px solid floralwhite;
+    color: floralwhite;
+    background-color: rgba(46, 46, 46, 0.5);
+    width: 300px;
+    height: 75px;
+    transition: all 0.5s;
+}
+
+.btn:hover {
+    background-color: burlywood;
+    border: 2px solid burlywood ;
+    color: black
 }
