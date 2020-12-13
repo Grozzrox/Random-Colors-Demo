@@ -30,4 +30,47 @@ function brownBaths() {
     }
 }
 
+function makeColor(color) {
+    document.body.style.backgroundColor = color;
+}
+
+const makeWhite = document.querySelector('#white');
+const makeGreen = document.querySelector('#green');
+const makePink = document.querySelector('#pink');
+
+makeWhite.addEventListener("click", function() {
+    makeColor("white");
+});
+
+makeGreen.addEventListener("click", function() {
+    makeColor("green");
+})
+
+makePink.addEventListener("click", function() {
+    makeColor("pink");
+})
 // const newButon = document.createElement('button');
+
+/*
+document.getElementById('container');
+const container = document.querySelector('#container');
+const second = document.querySelectorAll('.second');
+const third = document.querySelector('ol .third');
+const footer = document.querySelector('.footer');
+const newLi = document.createElement('li');
+const ul = document.querySelector('ul');
+const lis = document.querySelectorAll('ol li');
+
+container.prepend("Hello!");
+footer.classList.add("main");
+footer.classList.remove("main");
+
+newLi.innerText = "four";
+ul.append(newLi);
+
+for (let li of lis) {
+    li.style.backgroundColor = "green"; 
+}
+
+footer.remove();
+*/
