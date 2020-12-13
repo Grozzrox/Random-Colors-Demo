@@ -37,6 +37,7 @@ function makeColor(color) {
 const makeWhite = document.querySelector('#white');
 const makeGreen = document.querySelector('#green');
 const makePink = document.querySelector('#pink');
+const makeBlack = document.querySelector('#black');
 
 makeWhite.addEventListener("click", function() {
     makeColor("white");
@@ -49,6 +50,25 @@ makeGreen.addEventListener("click", function() {
 makePink.addEventListener("click", function() {
     makeColor("pink");
 })
+
+makeBlack.addEventListener('click', function() {
+    makeColor("black");
+})
+
+function changeBackground(x, y) {
+    const body = document.querySelector('body');
+
+    body.style.backgroundColor = `rgb(${x}, 0, ${y})`;
+}
+
+document.addEventListener("mousemove", function(evt) {
+    const x = Math.floor((evt.x*255)/window.innerWidth);
+    const y = Math.floor((evt.y*255)/window.innerHeight);
+    console.log(x,y);
+    changeBackground(x, y);
+})
+
+
 // const newButon = document.createElement('button');
 
 /*
